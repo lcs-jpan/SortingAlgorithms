@@ -114,7 +114,7 @@ var cards : [Int] = []
 //for _ in 1...20 {
 //    cards.append( random(between: 1, and: 33) )
 //}
-cards.append(8)
+cards.append(29)
 cards.append(7)
 cards.append(6)
 cards.append(5)
@@ -122,12 +122,26 @@ cards.append(5)
 for i in 0...cards.count - 1 - 1 {
     if cards[i] > cards[i+1] {
         let temporaryValue = cards[i]
-        cards[i] = cards[i+1]
-        cards[i+1] = temporaryValue
+            cards[i] = cards[i+1]
+            cards[i+1] = temporaryValue
+        }
+        for i in 0...cards.count - 1 - 1 {
+                if cards[i] > cards[i+1] {
+                    let temporaryValueb = cards[i]
+                    cards[i] = cards[i+1]
+                    cards[i+1] = temporaryValueb
+        }
     }
 }
-
-cards
+//for i in 0...cards.count - 1 - 1 {
+//    if cards[i] > cards[i+1] {
+//        let temporaryValue = cards[i]
+//        cards[i] = cards[i+1]
+//        cards[i+1] = temporaryValue
+//    }
+//}
+//
+//cards
 // Loop through all the cards in the unsorted deck
 // and then find the minimum
 
